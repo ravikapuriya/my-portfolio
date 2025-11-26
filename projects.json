@@ -1,0 +1,26 @@
+[
+  {
+    "title": "2048 Drop",
+    "image": "./assets/images/portfolio/project-2048drop.png",
+    "description": "“2048 Drop” is a physics-based number puzzle game where the player drops numbered balls into a container. When two balls of the same value collide, they merge into one ball of the next power of 2. The goal is to reach the tile 2048 or achieve the highest score before the container overflows.",
+    "link": "https://playgama.com/game/2048-drop?utm_source=share-game",
+    "linkLabel": "View Project",
+    "category": "Personal Project"
+  },
+  {
+    "title": "WordQuest",
+    "image": "./assets/images/portfolio/project-wordquest.png",
+    "description": "A modern, interactive word search puzzle game built with Phaser 3 and TypeScript. Find hidden words in the grid by dragging your finger/mouse across letters!",
+    "link": "https://wordquest-eight.vercel.app/",
+    "linkLabel": "Play Online",
+    "category": "Personal Project"
+  },
+  {
+    "title": "Multiplayer TicTacToe",
+    "image": "./assets/images/project-ludo.jpg",
+    "description": "A multiplayer TicTacToe game built with Phaser 3 and TypeScript. Play against friends or family in real-time!",
+    "link": "https://tictactoe-game-three.vercel.app/",
+    "linkLabel": "Play Online",
+    "category": "Personal Project"
+  }
+]

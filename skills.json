@@ -1,0 +1,104 @@
+[
+  {
+    "catogory": "design-tools",
+    "title": "Texture Packer",
+    "icon": "assets/images/skills/icon-texture-packer.png",
+    "percentage": 90
+  },
+  {
+    "catogory": "design-tools",
+    "title": "Tiled",
+    "icon": "assets/images/skills/icon-tiled.png",
+    "percentage": 90
+  },
+  {
+    "catogory": "design-tools",
+    "title": "Figma",
+    "icon": "assets/images/skills/icon-figma.png",
+    "percentage": 90
+  },
+  {
+    "catogory": "languages",
+    "title": "HTML5",
+    "icon": "assets/images/skills/icon-html5.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "languages",
+    "title": "CSS3",
+    "icon": "assets/images/skills/icon-css3.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "languages",
+    "title": "JavaScript",
+    "icon": "assets/images/skills/icon-javascript.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "languages",
+    "title": "TypeScript",
+    "icon": "assets/images/skills/icon-typescript.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "languages",
+    "title": "C#",
+    "icon": "assets/images/skills/icon-csharp.png",
+    "percentage": 60
+  },
+  {
+    "catogory": "game-engines",
+    "title": "Phaser",
+    "icon": "assets/images/skills/icon-phaser.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "game-engines",
+    "title": "PixiJS",
+    "icon": "assets/images/skills/icon-pixijs.png",
+    "percentage": 75
+  },
+  {
+    "catogory": "game-engines",
+    "title": "Box2D",
+    "icon": "assets/images/skills/icon-box2d.png",
+    "percentage": 85
+  },
+  {
+    "catogory": "game-engines",
+    "title": "Matter.js",
+    "icon": "assets/images/skills/icon-matterjs.svg",
+    "percentage": 85
+  },
+  {
+    "catogory": "development-tools",
+    "title": "Cocos Creator",
+    "icon": "assets/images/skills/icon-cocos.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "development-tools",
+    "title": "Webstorm",
+    "icon": "assets/images/skills/icon-webstorm.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "development-tools",
+    "title": "VS Code",
+    "icon": "assets/images/skills/icon-vscode.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "development-tools",
+    "title": "Cursor",
+    "icon": "assets/images/skills/icon-cursor.png",
+    "percentage": 100
+  },
+  {
+    "catogory": "development-tools",
+    "title": "Unity",
+    "icon": "assets/images/skills/icon-unity.png",
+    "percentage": 50
+  }
+]

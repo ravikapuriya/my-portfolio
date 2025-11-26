@@ -1,0 +1,51 @@
+[
+  {
+    "company": "Yaama Tech",
+    "role": "Senior Game Developer",
+    "location": "Sydney, Australia (Remote)",
+    "period": "Apr 2025 – Present",
+    "description": "Building and maintaining interactive casino and slot games using Phaser.js and Pixi.js. Implementing spin handling, paylines, bonus rounds, and integrating real-time betting logic and leaderboards."
+  },
+  {
+    "company": "Infinity Games",
+    "role": "Senior Game Developer",
+    "location": "Lisbon, Portugal (Remote)",
+    "period": "Jun 2024 – Apr 2025",
+    "description": "Developed advanced TicTacToe variants (5x5, Pyramid, Ultimate 9x9) and Ludo in Cocos Creator 3, including multiplayer, leaderboards, reward-based ads, and localization for a global audience."
+  },
+  {
+    "company": "A5 Labs",
+    "role": "Senior Game Developer",
+    "location": "California, USA (Remote)",
+    "period": "Apr 2022 – Jun 2024",
+    "description": "Worked on WPT Global Poker using Cocos Creator, focusing on gameplay systems, UI/UX, cross-platform optimization, and localization for Japanese and Korean markets."
+  },
+  {
+    "company": "Gamezop",
+    "role": "Game Developer",
+    "location": "Delhi, India (Remote)",
+    "period": "May 2021 – Apr 2022",
+    "description": "Designed and developed hyper-casual games using Cocos Creator, Phaser 3, and Construct 2. Also reskinned existing games by updating graphics, UI, and gameplay feel."
+  },
+  {
+    "company": "BYJU’S – The Learning App (Xplore Team)",
+    "role": "Game Developer",
+    "location": "Bengaluru, India (On-site)",
+    "period": "Nov 2018 – May 2021",
+    "description": "Founding member of the Xplore team, integrating lightweight HTML5 games into the BYJU’s app. Prototyped with Unity, Cocos Creator, and Phaser, and built internal templates to streamline development."
+  },
+  {
+    "company": "Digient Technologies",
+    "role": "Game Developer",
+    "location": "Bengaluru, India (On-site)",
+    "period": "Jun 2018 – Nov 2018",
+    "description": "Developed casino web games like Triple Chance, Rummy, and Andar Bahar using Phaser 3 and Pixi.js, working with secure real-money flows and mentoring junior developers."
+  },
+  {
+    "company": "Map Systems",
+    "role": "Application Developer",
+    "location": "Bengaluru, India (On-site)",
+    "period": "Nov 2016 – Apr 2018",
+    "description": "Built HTML5 educational games using JavaScript, jQuery, Canvas, and Phaser 2, including interactive Math and Science learning games for kids."
+  }
+]
