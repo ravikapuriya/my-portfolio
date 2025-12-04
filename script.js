@@ -30,13 +30,14 @@ for (let i = 0; i < selectItems.length; i++) {
 }
 
 // filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
 const filterFunc = function (selectedValue) {
+  const filterItems = document.querySelectorAll("[data-filter-item]");
+  const normalizedValue = selectedValue === "all" ? "all" : selectedValue.split(" ")[0].toLowerCase();
+
   for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all") {
+    if (normalizedValue === "all") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (normalizedValue === filterItems[i].dataset.category) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -44,7 +45,6 @@ const filterFunc = function (selectedValue) {
   }
 }
 
-// add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -58,15 +58,12 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-// contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -74,6 +71,24 @@ for (let i = 0; i < formInputs.length; i++) {
     }
   });
 }
+
+// Handle form submission
+form.addEventListener("submit", function (e) {
+  formBtn.setAttribute("disabled", "");
+  const originalBtnText = formBtn.querySelector("span").textContent;
+  formBtn.querySelector("span").textContent = "Sending...";
+
+  // Form will submit normally to FormSubmit service
+  // Reset button text after a delay (in case of error)
+  setTimeout(() => {
+    if (formBtn.querySelector("span").textContent === "Sending...") {
+      formBtn.querySelector("span").textContent = originalBtnText;
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      }
+    }
+  }, 5000);
+});
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -105,7 +120,6 @@ async function loadExperienceFromJson() {
     if (!res.ok) throw new Error('Failed to load experiences.json');
     const experiences = await res.json();
 
-    // Prefer explicit #experience-list if user adds it, otherwise find the Experience timeline in Resume page
     let list = document.getElementById('experience-list');
     if (!list) {
       const resumePage = document.querySelector('[data-page="experience"]');
@@ -121,7 +135,6 @@ async function loadExperienceFromJson() {
     }
     if (!list) return;
 
-    // Clear existing static items and rebuild from JSON
     list.innerHTML = '';
 
     experiences.forEach(exp => {
@@ -146,7 +159,6 @@ async function loadProjectsFromJson() {
     if (!res.ok) throw new Error('Failed to load projects.json');
     const projects = await res.json();
 
-    // Prefer explicit #projects-list if user adds it, otherwise use default .project-list
     let list = document.getElementById('projects-list');
     if (!list) {
       const portfolioPage = document.querySelector('[data-page="portfolio"]');
@@ -155,17 +167,20 @@ async function loadProjectsFromJson() {
     }
     if (!list) return;
 
-    // Clear existing static projects
     list.innerHTML = '';
 
     projects.forEach(p => {
       const li = document.createElement('li');
       li.className = 'project-item active';
       li.setAttribute('data-filter-item', '');
-      // Normalize category to lowercase for filtering (matching filter button text.toLowerCase())
       li.setAttribute('data-category', p.category.toLowerCase());
 
       const hasLink = !!p.link;
+      const skillsHtml = p.skills && p.skills.length > 0
+        ? `<div class="project-skills">
+            ${p.skills.map(skill => `<code class="project-skill">${skill}</code>`).join('')}
+          </div>`
+        : '';
 
       li.innerHTML = `
         <a href="${hasLink ? p.link : '#'}" ${hasLink ? 'target="_blank" rel="noopener"' : ''}>
@@ -177,6 +192,7 @@ async function loadProjectsFromJson() {
           </figure>
           <h3 class="project-title">${p.title}</h3>
           <p class="project-category">${p.description}</p>
+          ${skillsHtml}
         </a>
       `;
       list.appendChild(li);
@@ -198,7 +214,7 @@ async function loadSkillsFromJson() {
     // Group skills by category
     const skillsByCategory = {};
     skills.forEach(skill => {
-      const category = skill.catogory || skill.category; // Handle typo in JSON
+      const category = skill.catogory || skill.category;
       if (!skillsByCategory[category]) {
         skillsByCategory[category] = [];
       }
@@ -257,9 +273,33 @@ async function loadSkillsFromJson() {
   }
 }
 
+// Show success message if form was submitted successfully
+function showFormSuccessMessage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    const formBtn = document.querySelector("[data-form-btn]");
+    if (formBtn) {
+      formBtn.querySelector("span").textContent = "Message Sent!";
+      formBtn.style.background = "#4caf50";
+      formBtn.setAttribute("disabled", "");
+
+      // Clear URL parameter
+      window.history.replaceState({}, document.title, window.location.pathname);
+
+      // Reset after 5 seconds
+      setTimeout(() => {
+        formBtn.querySelector("span").textContent = "Send Message";
+        formBtn.style.background = "";
+        formBtn.setAttribute("disabled", "");
+      }, 5000);
+    }
+  }
+}
+
 // Kick off JSON loading after DOM is parsed
 window.addEventListener('DOMContentLoaded', function () {
   loadExperienceFromJson();
   loadProjectsFromJson();
   loadSkillsFromJson();
+  showFormSuccessMessage();
 });

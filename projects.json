@@ -2,25 +2,58 @@
   {
     "title": "2048 Drop",
     "image": "./assets/images/portfolio/project-2048drop.png",
-    "description": "“2048 Drop” is a physics-based number puzzle game where the player drops numbered balls into a container. When two balls of the same value collide, they merge into one ball of the next power of 2. The goal is to reach the tile 2048 or achieve the highest score before the container overflows.",
+    "description": "2048 Drop is a physics-based number puzzle where you drop balls into a container and merge matching values to create higher tiles. Combine smartly to reach 2048 or push your score as high as possible before the container fills up.",
     "link": "https://playgama.com/game/2048-drop?utm_source=share-game",
     "linkLabel": "View Project",
-    "category": "Personal Project"
+    "category": "personal",
+    "skills": [
+      "Phaser 3",
+      "TypeScript",
+      "Texture Packer"
+    ]
   },
   {
     "title": "WordQuest",
     "image": "./assets/images/portfolio/project-wordquest.png",
-    "description": "A modern, interactive word search puzzle game built with Phaser 3 and TypeScript. Find hidden words in the grid by dragging your finger/mouse across letters!",
+    "description": "The Family Man is an endless runner game where the player controls a character and runs through a series of obstacles. The game is a simple and fun way to test your reflexes and speed.",
     "link": "https://wordquest-eight.vercel.app/",
     "linkLabel": "Play Online",
-    "category": "Personal Project"
+    "category": "personal",
+    "skills": [
+      "Phaser 3",
+      "TypeScript",
+      "Texture Packer"
+    ]
   },
   {
     "title": "Multiplayer TicTacToe",
-    "image": "./assets/images/project-ludo.jpg",
-    "description": "A multiplayer TicTacToe game built with Phaser 3 and TypeScript. Play against friends or family in real-time!",
-    "link": "https://tictactoe-game-three.vercel.app/",
+    "image": "./assets/images/portfolio/project-tictactoe.png",
+    "description": "A reimagined take on the classic TicTacToe experience. Play solo, challenge friends online, or compete locally. Unlock themes, earn rewards, and climb leaderboards while facing AI or real opponents.",
+    "link": "https://poki.com/en/g/tic-tac-toe",
     "linkLabel": "Play Online",
-    "category": "Personal Project"
+    "category": "company",
+    "skills": [
+      "Cocos Creator",
+      "TypeScript",
+      "Texture Packer",
+      "PokiSDK",
+      "Multiplayer",
+      "Leaderboards",
+      "Reward-based ads",
+      "Localization"
+    ]
+  },
+  {
+    "title": "The Family Man - Endless Runner Game",
+    "image": "./assets/images/portfolio/project-thefamilyman.png",
+    "description": "A fast-paced endless runner where you dodge obstacles, react quickly, and push for high scores. Simple controls, smooth gameplay, and a fun challenge for all ages.",
+    "link": "https://thefamilymangame.com/",
+    "linkLabel": "Play Online",
+    "category": "freelance",
+    "skills": [
+      "Phaser 3",
+      "TypeScript",
+      "Texture Packer"
+    ]
   }
 ]
